@@ -143,3 +143,83 @@ nav {
     color: #FFFFFF;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
 }
+
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    /* position: relative; */
+    min-height: 849px;
+    padding: 20px 0 67px 0;
+}
+
+.benefits .benefits_plate {
+    display: block;
+    margin: 0 auto;
+    /* margin-top: 18px; */
+    width: 115px;
+    height: 27px;
+    background: #000000;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    /* mix-blend-mode: normal; */
+}
+
+.benefits .benefits_title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #222222;
+    margin-top: 77px;
+}
+
+.benefits .benefits_item {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* flex-wrap: wrap; */
+    margin-top: 35px;
+    width: 341px;
+    height: 128px;
+    display: block;
+}
+
+.benefits .benefits_round {
+    width: 116px;
+    height: 116px;
+    background: #1EACC7;
+    border-radius: 100%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    /* align-items: center; */
+    color: #1EACC7;
+}
+
+.benefits .benefits_descr {
+    width: 371px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #202020;
+}
+
+.benefits .benefits_descr span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    color: #1EACC7;
+}
