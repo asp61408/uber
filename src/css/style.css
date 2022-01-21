@@ -4,11 +4,15 @@
 
 header {
     position: relative;
+    height: 50px;
 }
 
 nav {
+    position: fixed;
+    width: 100%;
     height: 50px;
     background: #212121;
+    z-index: 2;
 }
 
 .menu {
@@ -20,7 +24,6 @@ nav {
 }
 
 .menu .menu_link {
-    font-style: normal;
     font-weight: 300;
     font-size: 15px;
     line-height: 15px;
@@ -34,6 +37,7 @@ nav {
 
 .subheader {
     position: absolute;
+    top: 50px;
     width: 100%;
     height: 87px;
     background: rgba( 0, 0, 0, .6)
@@ -47,15 +51,15 @@ nav {
 
 .subheader .subheader_official {
     margin-top: 6px;
-    font-style: normal;
-    font-weight: 100;
+    opacity: 0.5;
+    font-weight: 400;
     font-size: 13px;
     color: #FFFFFF;
+    text-align: right;
 }
 
 .subheader .subheader_call {
     margin-top: 18px;
-    font-style: normal;
     font-weight: 300;
     font-size: 12px;
     /* line-height: 14px; */
@@ -66,8 +70,6 @@ nav {
 .subheader .subheader_phone {
     display: block;
     margin-top: 3px;
-    font-style: normal;
-    font-weight: normal;
     font-size: 22px;
     line-height: 22px;
     text-align: right;
@@ -99,10 +101,9 @@ nav {
 
 .promo .promo_header {
     text-align: center;
-    font-style: normal;
     font-weight: 900;
     font-size: 60px;
-    /* line-height: 24px; */
+    line-height: 60px;
     text-transform: uppercase;
     color: #FFFFFF;
 }
@@ -112,15 +113,16 @@ nav {
     font-size: 36px;
     line-height: 36px;
     font-weight: 700;
+    margin: 0;
+    margin-top: 22px;
     text-transform: uppercase;
     color: #FFFFFF;
 }
 
 .promo .promo_descr {
-    font-style: normal;
-    font-weight: normal;
     font-size: 18px;
     line-height: 24px;
+    font-weight: 400;
     text-align: center;
     color: #FFFFFF;
     margin-top: 16px;
@@ -135,9 +137,8 @@ nav {
     border-radius: 4px;
     margin: 118px auto 0 auto;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 18px;
-    /* line-height: 63px; */
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
@@ -145,30 +146,27 @@ nav {
 }
 
 .reasons {
-    min-height: 849px;
+    /* min-height: 849px; */
     padding: 20px 0 67px 0;
 }
 
-.reasons .label {
-    display: block;
+.label {
     margin: 0 auto;
-    /* margin-top: 18px; */
     width: 115px;
     height: 27px;
+    padding: 5px 12px;
     background: #000000;
-    font-style: normal;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 11px;
-    line-height: 30px;
+    line-height: 20px;
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    /* mix-blend-mode: normal; */
 }
 
-.reasons .reasons_title {
-    font-style: normal;
-    font-weight: bold;
+.title {
+    margin-bottom: 0;
+    font-weight: 700;
     font-size: 38px;
     text-align: center;
     text-transform: uppercase;
@@ -176,13 +174,14 @@ nav {
     margin-top: 33px;
 }
 
-.reasons .reasons_item {
+.reasons .reasons_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 35px;
-    width: 341px;
-    height: 128px;
 }
 
-.reasons .reasons_round {
+.reasons .reasons_block .reasons_round {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,28 +189,23 @@ nav {
     height: 116px;
     background: #1EACC7;
     border-radius: 100%;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    color: #1EACC7;
+    margin-right: 26px;
 }
 
-.reasons .reasons_descr {
-    margin-top: 35px;
-    width: 357px;
-    /* width: 341px; */
-    font-style: normal;
-    font-weight: normal;
+.reasons .reasons_block .reasons_descr {
+    width: 341px;
+}
+
+.reasons .reasons_block .reasons_descr .reasons_text {
+    margin-top: 3px;
+    font-weight: 400;
     font-size: 17px;
     line-height: 21px;
-    font-size: 15px;
-    font-weight: 300;
     color: #202020;
 }
 
-.reasons .reasons_descr span {
-    font-style: normal;
-    font-weight: normal;
+.reasons .reasons_block .reasons_descr .reasons_subtitle {
+    font-weight: 300;
     font-size: 17px;
     line-height: 21px;
     color: #1EACC7;

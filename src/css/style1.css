@@ -1,0 +1,72 @@
+.reasons {
+    min-height: 849px;
+    padding: 20px 0 67px 0;
+}
+
+.reasons .label {
+    display: block;
+    margin: 0 auto;
+    /* margin-top: 18px; */
+    width: 115px;
+    height: 27px;
+    background: #000000;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    /* mix-blend-mode: normal; */
+}
+
+.reasons .reasons_title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #222222;
+    margin-top: 33px;
+}
+
+.reasons .reasons_item {
+    margin-top: 35px;
+    width: 341px;
+    height: 128px;
+}
+
+.reasons .reasons_round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 116px;
+    height: 116px;
+    background: #1EACC7;
+    border-radius: 100%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: #1EACC7;
+}
+
+.reasons .reasons_descr {
+    margin-top: 35px;
+    width: 357px;
+    /* width: 341px; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #202020;
+}
+
+.reasons .reasons_descr span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    color: #1EACC7;
+}
