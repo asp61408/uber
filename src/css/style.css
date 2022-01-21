@@ -55,7 +55,6 @@ nav {
     font-weight: 400;
     font-size: 13px;
     color: #FFFFFF;
-    text-align: right;
 }
 
 .subheader .subheader_call {
@@ -209,4 +208,32 @@ nav {
     font-size: 17px;
     line-height: 21px;
     color: #1EACC7;
+}
+
+.mobile {
+    min-height: 864px;
+    padding: 46px 0 80px 0;
+}
+
+.mobile .mobile_text {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 17px;
+    /* line-height: 21px; */
+    text-align: center;
+    color: #222222;
+}
+
+.mobile .mobile_card {
+    margin-top: 20px;
+}
+
+.mobile .mobile_card-text {
+    /* margin: 0 auto; */
+    /* text-align: center; */
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: green;
 }
