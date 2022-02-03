@@ -1,7 +1,17 @@
 $color_blue: #1EACC7
 $color_red: #ff5656
+
+=btn_hover
+    &:hover
+        background-image: none
+        background-color: $color_blue
+=btn_active
+    &:active
+        background-color: #fff
+        color: #000
 *
     font-family: 'Roboto', sans-serif
+    max-width: 1920px
 
 header
     position: relative
@@ -12,7 +22,7 @@ nav
     width: 100%
     height: 50px
     background: #212121
-    z-index: 2
+    z-index: 5
 
 .menu
     display: flex
@@ -21,15 +31,16 @@ nav
     margin: 0
     list-style-type: none
 
-.menu_link
-    font-weight: 300
-    font-size: 15px
-    line-height: 15px
-    color: #FFFFFF
+    &_link
+        font-weight: 300
+        font-size: 15px
+        color: #FFFFFF
 
-.menu_item
-    border-right: 2px dotted black
-    padding-right: 42px
+    &_item
+        border-right: 2px dotted black
+        padding-right: 42px
+        &:last-child
+            border-right: none
 
 .subheader
     position: absolute
@@ -38,157 +49,175 @@ nav
     height: 87px
     background: rgba(0, 0, 0, 0.6)
 
-.subheader_logo
-    min-width: 100%
-    display: block
-    margin-top: 16px
+    &_logo
+        min-width: 100%
+        display: block
+        margin-top: 16px
 
-.subheader_official
-    margin-top: 6px
-    opacity: 0.5
-    font-weight: 400
-    font-size: 13px
-    color: #FFFFFF
+    &_official
+        margin-top: 6px
+        opacity: 0.5
+        font-weight: 400
+        font-size: 13px
+        color: #FFFFFF
 
-.subheader_call
-    margin-top: 18px
-    font-weight: 300
-    font-size: 12px
-    text-align: right
-    color: #FFFFFF
+    &_call
+        margin-top: 18px
+        font-weight: 300
+        font-size: 12px
+        text-align: right
+        color: #FFFFFF
 
-.subheader_phone
-    display: block
-    margin-top: 3px
-    font-size: 22px
-    line-height: 22px
-    text-align: right
-    text-transform: uppercase
-    color: #FFFFFF
+    &_phone
+        display: block
+        margin-top: 3px
+        font-size: 22px
+        line-height: 22px
+        text-align: right
+        font-weight: 400
+        text-transform: uppercase
+        color: #FFFFFF
+        text-align: right
+        text-decoration: none
 
-.subheader_btn
-    margin-top: 19px
-    width: 172px
-    height: 46px
-    background-image: linear-gradient(0.0deg, #1eacc7 0%, #4ce2ff 100%)
-    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
-    border-radius: 4px
-    font-style: normal
-    font-weight: normal
-    font-size: 14px
-    text-align: center
-    text-transform: uppercase
-    color: #FFFFFF
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+    &_btn
+        margin-top: 19px
+        width: 172px
+        height: 46px
+        background-image: linear-gradient(0.0deg, $color_blue 0%, #4ce2ff 100%)
+        box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
+        border: none
+        border-radius: 4px
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        text-align: center
+        text-transform: uppercase
+        color: #FFFFFF
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+        +btn_hover
+        +btn_active
 
 .promo
     min-height: 799px
     background: url('../img/bg/uber_bg.png') center (center / cover) no-repeat
     padding: 152px 0 186px 0
 
-.promo_header
-    text-align: center
-    font-weight: 900
-    font-size: 60px
-    line-height: 60px
-    text-transform: uppercase
-    color: #FFFFFF
-z
-.promo_subheader
-    text-align: center
-    font-size: 36px
-    line-height: 36px
-    font-weight: 700
-    margin: 0
-    margin-top: 22px
-    text-transform: uppercase
-    color: #FFFFFF
+    &_header
+        text-align: center
+        font-weight: 900
+        font-size: 60px
+        line-height: 60px
+        text-transform: uppercase
+        color: #FFFFFF
 
-.promo_descr
-    font-size: 18px
-    line-height: 24px
-    font-weight: 400
-    text-align: center
-    color: #FFFFFF
-    margin-top: 16px
+    &_subheader
+        text-align: center
+        font-size: 36px
+        line-height: 36px
+        font-weight: 700
+        margin: 0
+        margin-top: 22px
+        text-transform: uppercase
+        color: #FFFFFF
 
-.promo_btn
-    display: block
-    width: 259px
-    height: 63px
-    background: linear-gradient(0deg, $color_blue 0%, #4CE2FF 100%)
-    box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12)
-    border-radius: 4px
-    margin: 118px auto 0 auto
-    font-style: normal
-    font-weight: 400
-    font-size: 18px
-    text-align: center
-    text-transform: uppercase
-    color: #FFFFFF
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+    &_descr
+        font-size: 18px
+        line-height: 24px
+        font-weight: 400
+        text-align: center
+        color: #FFFFFF
+        margin-top: 16px
 
-.reasons
-    min-height: 849px
-    padding: 20px 0 67px 0
+    &_btn
+        display: block
+        width: 259px
+        height: 63px
+        background: linear-gradient(0deg, $color_blue 0%, #4CE2FF 100%)
+        box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12)
+        border-radius: 4px
+        border: none
+        margin: 118px auto 0 auto
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        text-align: center
+        text-transform: uppercase
+        color: #FFFFFF
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+        +btn_hover
+        +btn_active
 
 .label
+    position: relative
     margin: 0 auto
     width: 115px
     height: 27px
     padding: 5px 12px
-    background: #000000
+    background-color: #000000
     font-weight: 300
     font-size: 11px
     line-height: 20px
     text-align: center
     text-transform: uppercase
     color: #FFFFFF
-.choice_label
-    background: #FFFFFF
-    color: #070716
-
+    z-index: 2
+    &_white
+        background: #FFFFFF
+        color: #070716
 .title
+    position: relative
     margin-bottom: 0
     font-weight: 700
     font-size: 38px
+    line-height: 38px
     text-align: center
     text-transform: uppercase
     color: #222222
     margin-top: 35px
+    &_white
+        color: #ffffff
 
-.reasons .reasons_block
-    display: flex
-    justify-content: center
-    align-items: center
-    margin-top: 35px
+.subtitle
+    position: relative
+    margin-top: 19px
+    font-weight: 400
+    font-size: 17px
+    text-align: center
+    z-index: 2
+    &_white
+        color: #FFFFFF
 
-.reasons_round
-    display: flex
-    justify-content: center
-    align-items: center
-    width: 116px
-    height: 116px
-    background: $color_blue
-    border-radius: 100%
-    margin-right: 26px
-
-.reasons_descr
-    width: 341px
-
-    .reasons_text
-        margin-top: 3px
-        font-weight: 400
-        font-size: 17px
-        line-height: 21px
-        color: #202020
-
-    .reasons_subtitle
-        font-weight: 300
-        font-size: 17px
-        line-height: 21px
-        color: $color_blue
-
+.reasons
+    min-height: 849px
+    padding: 70px 0 67px 0
+    &_block
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-top: 35px
+    &_round
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 116px
+        height: 116px
+        background: $color_blue
+        border-radius: 100%
+        margin-right: 26px
+    &_descr
+        width: 341px
+        &_text
+            margin-top: 3px
+            font-weight: 400
+            font-size: 17px
+            line-height: 21px
+            color: #202020
+        &_subtitle
+            font-weight: 300
+            font-size: 17px
+            line-height: 21px
+            color: $color_blue
 .mobile
     min-height: 864px
     padding: 46px 0 80px 0
@@ -201,10 +230,6 @@ z
         padding-top: 91px
         width: 320px
         height: 280px
-        font-size: 24px
-        font-weight: 400
-        text-transform: uppercase
-        color: #ffffff
         &_1
             background: url('../img/bg/cards/1_card.png') center (center / cover) no-repeat
         &_2
@@ -218,6 +243,7 @@ z
         &_6
             background: url('../img/bg/cards/6_card.png') center center/cover no-repeat
         &_plus
+            position: absolute
             display: flex
             justify-content: center
             align-items: center
@@ -231,6 +257,26 @@ z
             bottom: 35px
             margin: 0 auto
             cursor: pointer
+            &::before
+                content: ''
+                display: block
+                width: 14px
+                height: 2px
+                background-color: $color_blue
+                transition: 0.5s all
+            &::after
+                position: absolute
+                content: ''
+                display: block
+                width: 2px
+                left: 50%
+                transform: translateX(-50%)
+                height: 14px
+                background-color: $color_blue
+                transition: 0.5s all
+            &:hover
+                &::after, &::before
+                    background-color: $color_red
 
         &_subtitle
             margin: 0 auto
@@ -241,32 +287,159 @@ z
             text-transform: uppercase
             color: #ffffff
 
-.subtitle
-    margin-top: 19px
-    font-weight: 400
-    font-size: 17px
-    text-align: center
 .choice
     position: relative
-    min-height: 898px
-    padding: 59px 0 137px 0
-    background: url('../img/bg/choice_bg.png') bottom/100% 400px no-repeat, #070716 top/auto 500px no-repeat
-    .title
-        margin-top: 26px
-        color: #ffffff
-    &_subtitle
-        margin-top: 1px
-        font-style: normal
-        font-size: 17px
-        text-align: center
-        color: #FFFFFF
+    min-height: 895px
+    padding: 57px 0 138px 0
+    background: url('../img/bg/choice_bg.png') center (center / cover) no-repeat
     &_img
+        position: relative
         display: block
-        margin: 0 auto
-        margin-top: 54px
-    &_text
-        font-style: normal
-        font-weight: 300
-        font-size: 17px
-        color: #222222
+        margin: 56px auto 0 auto
+        z-index: 2
+    &_descr
         text-align: center
+        color: #222222
+        font-size: 17px
+        font-weight: 300
+        line-height: 24px
+    .black
+        position: absolute
+        top: 0
+        left: 0
+        height: 499px
+        width: 100%
+        background-color: #070716
+        z-index: 1
+.required
+    padding: 68px 0 84px 0
+    &_block
+        margin: 33px 0
+        &_nmb
+            margin-bottom: 0
+    &_title
+        font-size: 22px
+        font-weight: 400
+        color: #1ca8c3
+    &_list
+        list-style: none
+        padding-left: 50px
+        margin-top: 20px
+        li
+            position: relative
+            font-size: 17px
+            line-height: 24px
+            font-weight: 300
+            margin-bottom: 10px
+            color: #222222
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                left: -32px
+                top: 3px
+                width: 21px
+                height: 20px
+                background: url('../icons/check_blue.png') center (center / cover) no-repeat
+
+    &_descr
+        font-size: 17px
+        font-weight: 300
+        color: $color_blue
+    .red
+        .required_title
+            color: $color_red
+        .required_list
+            li
+                &:before
+                    background: url('../icons/check_red.png') center (center / cover) no-repeat
+.world
+    min-height: 717px
+    padding: 49px 0 49px 0
+    background: url('../img/bg/world_bg.png') center center/contain no-repeat, #080816
+    &_map a
+        display: block
+        margin-top: 486px
+        text-align: center
+        font-size: 15px
+        font-weight: 400
+        text-transform: uppercase
+        color: #1fbad6
+        text-decoration: none
+.footer
+    padding: 14px 23px 39px
+    &_wrapper
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        padding-top: 32px
+    &_wrapper > div
+        width: 33%
+        &:nth-child(3)
+            display: flex
+            justify-content: flex-end
+        .appstore
+            right: 23px
+            top: 52px
+    &_social
+        width: 160px
+        display: flex
+        justify-content: space-between
+        &_item
+            display: flex
+            justify-content: center
+            align-items: center
+            top: 51px
+            left: 23px
+            width: 32px
+            height: 32px
+            background-color: #070716
+            border-radius: 100%
+            i
+                color: white
+
+    .language
+        display: block
+        font-size: 11px
+        font-weight: 400
+        text-transform: uppercase
+        text-align: center
+        color: #1fbad6
+        text-decoration: none
+
+    &_divider
+        width: 299px
+        height: 4px
+        background-color: #1fbad6
+        margin: 0 auto
+
+    &_menu
+        display: flex
+        justify-content: space-between
+        font-size: 15px
+        font-weight: 300
+        text-transform: uppercase
+        color: #070716
+        list-style-type: none
+        a
+            text-decoration: none
+            color: #070716
+        li
+            margin-right: 45px
+            &:last-child
+                margin-right: 0
+    &_submenu
+        display: flex
+        justify-content: space-between
+        margin-top: 10px
+        font-size: 11px
+        font-weight: 300
+        text-transform: uppercase
+        a
+            text-decoration: none
+            color: #999999
+        li
+            list-style-type: none
+            margin-right: 22px
+            &:last-child
+                margin-right: 0
